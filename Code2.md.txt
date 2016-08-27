@@ -1,0 +1,36 @@
+
+# Load dataset
+library(datasets)
+data(ToothGrowth)
+
+
+# Find dimensions and Headers of dataset. Create a dataframe
+dim(ToothGrowth)
+names(ToothGrowth)
+df <- data.frame (ToothGrowth)
+
+### Provide a basic summary of the data
+
+# Find levels in 'supp' column
+categ_supp <- levels (df$supp)
+
+
+
+
+
+
+
+
+# Find correlation between Length and Dose
+y<- ToothGrowth$len
+x<- ToothGrowth$dose
+cor(y,x)
+
+# Create a Regression model between Length and Dose
+# y is Response variable, x is predictor variable
+
+relation <- lm (y ~ x)
+relation
+
+plot(y,x,col = "blue",main = "Tooth Length & Dose Regression", abline(lm(x~y)),cex = 1.3, xlab = "Dose",ylab = "Length in cm")
+
