@@ -3,16 +3,14 @@
 library(datasets)
 data(ToothGrowth)
 
-
 # Find dimensions and Headers of dataset. Create a dataframe
 dim(ToothGrowth)
 names(ToothGrowth)
 df <- data.frame (ToothGrowth)
 
 ### Provide a basic summary of the data
-
-# Find levels in 'supp' column
-categ_supp <- levels (df$supp)
+# Get basic summary figures
+summary (df)
 
 # Find frequency distribution of 'len' values
 range(df$len)                 # get range of values
@@ -20,6 +18,9 @@ breaks <- seq(0,40,by = 5)    # create buckets
 freq_len <- table (cut(df$len, breaks, right = FALSE))    # create frequency table with open ended Right ends
 
 # Draw bar chart
-barplot(freq_len, col = c("red", "green", "blue"))
+barplot(freq_len, col = c("red", "green", "blue", "yellow"), main = "Frequency distr of 'len' variable")
+
+# Compare Tooth length as per dosage levels
+boxplot(len~dose, data=df, main="Tooth Length by doses", ylab="Tooth Length", xlab="Dose levels")
 
 
