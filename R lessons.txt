@@ -1,12 +1,6 @@
 ways to do
 -----------
-https://rstudio-pubs-static.s3.amazonaws.com/54656_d6d44648f24a477496d5b120d8f59efc.html
-https://rstudio-pubs-static.s3.amazonaws.com/72874_d19e2461426a4e8a9b66256429973f4e.html
-https://github.com/alex23lemm/Statistical-inference-project/blob/master/exponential_dist_and_CLT.Rmd
-https://rpubs.com/karthy1988/clt
 
-
-http://www.stat.berkeley.edu/classes/s133/factors.html
 
 
 
