@@ -14,23 +14,12 @@ df <- data.frame (ToothGrowth)
 # Find levels in 'supp' column
 categ_supp <- levels (df$supp)
 
+# Find frequency distribution of 'len' values
+range(df$len)                 # get range of values
+breaks <- seq(0,40,by = 5)    # create buckets 
+freq_len <- table (cut(df$len, breaks, right = FALSE))    # create frequency table with open ended Right ends
 
+# Draw bar chart
+barplot(freq_len, col = c("red", "green", "blue"))
 
-
-
-
-
-
-# Find correlation between Length and Dose
-y<- ToothGrowth$len
-x<- ToothGrowth$dose
-cor(y,x)
-
-# Create a Regression model between Length and Dose
-# y is Response variable, x is predictor variable
-
-relation <- lm (y ~ x)
-relation
-
-plot(y,x,col = "blue",main = "Tooth Length & Dose Regression", abline(lm(x~y)),cex = 1.3, xlab = "Dose",ylab = "Length in cm")
 
