@@ -30,3 +30,6 @@ boxplot(len~supp, data=df, main="Tooth Length by supplement", ylab="Tooth Length
 # H0: There is no difference in Tooth Growth whether it's OJ or VC.
 t.test (len~supp, data = df)
 
+# Compare tooth growth by two levels of dose, use the Welch two sample t-test
+t.test (len~dose, data = df[df$dose==0.5 | df$dose==1,])
+t.test (len~dose, data = df[df$dose==1 | df$dose==2,])
