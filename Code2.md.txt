@@ -23,4 +23,7 @@ barplot(freq_len, col = c("red", "green", "blue", "yellow"), main = "Frequency d
 # Compare Tooth length as per dosage levels
 boxplot(len~dose, data=df, main="Tooth Length by doses", ylab="Tooth Length", xlab="Dose levels")
 
+# Compare Tooth length as per supplement levels
+boxplot(len~supp, data=df, main="Tooth Length by supplement", ylab="Tooth Length", xlab="Supp levels")
+
 
